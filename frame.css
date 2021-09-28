@@ -1,0 +1,3308 @@
+/*============================ index ============================
+
+	A.Import LESS library　				◆外部ライブラリの読込
+	B.Defines 							◆基本設定・定数設定
+	C.Reset CSS 						----- 基本的に編集不要 -----
+	D.Base Mixins 						----- 基本的に編集不要 -----
+	E.Original Mixins　					◆独自ミックスイン設定
+	F.Base Styles And Common Styles		◆基本スタイル・共通スタイル設定
+	G.Page Styles						◆各ページのスタイル設定　基本このファイルに
+										 個別の記述を行うこと
+
+================================================================*/
+@charset "utf-8";
+/* ------------------------------------------
+
+	File Name:		/css/less/frame.less
+	Author:         Yoshi.Y
+	Last Modified	2013/03/08
+	Style Info:		import less files
+
+------------------------------------------ */
+/*============================ index ============================
+
+	A.Import LESS library　				◆外部ライブラリの読込
+	B.Defines 							◆基本設定・定数設定
+	C.Reset CSS 						----- 基本的に編集不要 -----
+	D.Base Mixins 						----- 基本的に編集不要 -----
+	E.Original Mixins　					◆独自ミックスイン設定
+	F.Base Styles And Common Styles		◆基本スタイル・共通スタイル設定
+	G.Page Styles						◆各ページのスタイル設定　基本このファイルに
+										 個別の記述を行うこと
+
+================================================================*/
+/*==============================================================
+
+	A.Import LESS library
+
+================================================================*/
+/* bootstrap */
+/* @import "lib/Preboot/bootstrap.less"; */
+/* Useful Mixin library */
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*	Grid system
+	http://semantic.gs/
+------------------------------------------ */
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+/*==============================================================
+
+	B.Defines
+	
+================================================================*/
+/* ------------------------------------------
+
+	File Name:		/css/less/conf.less
+	Author:         Yoshi.Y
+	Last Modified	2013/03/08
+	Style Info:		define initial parameters
+
+------------------------------------------ */
+/*============================ index ============================
+
+	1. ROOT					[ bodyバックグラウンド色・基本文字色 ]
+	2. TYPOGRAPHY			[ フォント指定管理 ]
+	3. COLOR				[ 色指定関連 ]
+	4. LAYOUT 				[ レイアウト,box幅指定 ]
+	5. TEXTURE 				[ アイコンのパス等の指定 ]
+	6. VENDOR-SPECIFIC		[ ブラウザ毎の特別な指定 ]
+	7. MODERNIZR			[ modernizr.jsによって与えられたclassに関する指定 ]
+	8. SPECIFICS			[ その他特殊な指定等が必要な場合にはこちらに指定 ]
+
+================================================================*/
+/*==============================================================
+
+	1. ROOT[ bodyバックグラウンド色・基本文字色 ]
+
+================================================================*/
+/* body背景色 */
+/* 基本文字色 */
+/*==============================================================
+
+	2. TYPOGRAPHY[ フォント指定管理 ]
+
+	※フォントのimportはfont.lessにて行う
+
+================================================================*/
+/* 13px基準 */
+/*==============================================================
+
+	3. COLOR[ 色指定関連 ]
+
+================================================================*/
+/* テーマカラー */
+/* グレーカラー */
+/*==============================================================
+
+	4. LAYOUT[ レイアウト,box幅指定 ]
+
+================================================================*/
+/*	レイアウト切替
+		*パラメータ種別
+		normal:		通常の幅固定レイアウト
+		liquid:		幅%指定のリキッドレイアウト
+----------------------------------------------*/
+/*	define entire and content width
+		各BOX幅の設定
+		◆：必須設定
+----------------------------------------------*/
+/* ◆全体幅 */
+/* ◆コンテンツ幅 */
+/* ◆メインコンテンツの幅 */
+/* ◆グローバルナビ幅 */
+/* ◆グローバルナビの数 */
+/* グローバルナビ1つの幅 */
+/* margin, padding */
+/* 各BOX同士のmargin */
+/* サイドBOXの基本padding */
+/* multi devise */
+/* マルチデバイス向け、メインコンテンツ幅 %指定 */
+/*	サイドBOX設定
+----------------------------------------------*/
+/* second box 設定 */
+/* 2カラムの場合 */
+/* 3カラムの場合 */
+/*@Width_second:	 200px;
+	@Width_mainwrap:	@Width_content - @Width_second - @Margin_boxes;*//* 3カラムのメイン領域( main_box + third_box )の幅 */
+/* third box 設定 */
+/*	Grid system
+	http://semantic.gs/
+----------------------------------------------*/
+/* @Layout_Typeをliquidにしたい際は、@total-widthのコメントアウトを外してアクティベートする！ */
+/*==============================================================
+
+	5. TEXTURE[ アイコンのパス等の指定 ]
+
+================================================================*/
+/*	Markers
+	リスト等の先頭に付与する画像等のパス、拡張子の指定
+----------------------------------------------*/
+/* マーカーアイコン画像のパス */
+/* マーカーアイコン画像の拡張子 */
+/*==============================================================
+
+	6. VENDOR-SPECIFIC[ ブラウザ毎の特別な指定 ]
+
+================================================================*/
+/* .htc file path  */
+/*==============================================================
+
+	7. MODERNIZR[ modernizr.jsによって与えられたclassに関する指定 ]
+
+================================================================*/
+/*==============================================================
+
+	8. SPECIFICS[ その他特殊な指定等が必要な場合にはこちらに指定 ]
+
+================================================================*/
+/*==============================================================
+
+	C.Reset CSS
+	* 基本的に編集不要
+	
+	
+================================================================*/
+/* ------------------------------------------
+
+	File Name:		/css/less/reset.less
+	Author:         Yoshi.Y
+	Last Modified	2012/09/12
+	Style Info:		reset styles
+
+------------------------------------------ */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  text-align: left;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+body {
+  background: white;
+  line-height: 1;
+  color: black;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+form label,
+form button {
+  cursor: pointer;
+}
+img {
+  vertical-align: bottom;
+  border: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+/* ------------------------------------------
+	HTML5 tags
+------------------------------------------ */
+/* Sections */
+/* Grouping content */
+/* Text-level semantics */
+/* Embedded content */
+/* Forms */
+/* Interactive elements */
+/*==============================================================
+
+	D.Base Mixins
+	* 基本的に編集不要
+
+================================================================*/
+/* define variables and mixins */
+/*------------------------------------------
+
+	File Name:		/css/less/variables.less
+	Author:         Yoshi.Y
+	Last Modified	2012/11/20
+	Style Info:		define variables and mixins
+
+------------------------------------------ */
+/*============================ index ============================
+
+	1. TYPOGRAPHY　			フォント指定
+	2. COLOR　				色指定
+	3. LAYOUT　				レイアウト指定・各種BOX幅指定
+	4. TEXTURE				リスト要素設定
+	5. VENDOR-SPECIFIC 		各ブラウザ別の指定
+	6. MODERNIZR 			modeernizr.jsの設定
+	7. CLEAR FIX 			各ブラウザ別の指定
+
+	---------------<< Attentions >>---------------
+	
+	1.mixin及びネームスペースの名称には、必ず“_”をプレフィックスとして付与する事
+	  CSSのid名、class名の指定との衝突を避ける為
+		(ex)
+		._foo( @var ){ 
+			margin: 0px;
+		}
+	2.
+
+================================================================*/
+/*==============================================================
+
+	1. TYPOGRAPHY　フォント指定
+
+================================================================*/
+/*	
+	basic font setting
+----------------------------------------------*/
+/*	
+	web font
+	headerのimportによって読み込んだgoogle web fontを使用。
+	* lessによってimportした際、ie6-8 にwebフォントが適用されない為
+----------------------------------------------*/
+/*	
+	set font size
+	
+----------------------------------------------*/
+/*	第二引数はimportant指定するかどうかの指定
+		common.lessの中で、.t9 .t10　のような、直接class指定できる要素については、
+		important指定できるようにする。 */
+/*==============================================================
+
+	2. COLOR 色指定
+
+	* color operation *
+
+	lighten(@color, 10%) 	@colorより10%明るい色
+	darken(@color, 10%) 	@colorより10%暗い色
+	saturate(@color, 10%) 	@colorより10%彩度が高い色
+	desaturate(@color, 10%) @colorより10%彩度が低い色
+	fadein(@color, 10%) 	@colorより10%透過が高い色
+	fadeout(@color, 10%) 	@colorより10%透過が低い色
+	fade(@color, 50%) 		@colorより50%透過が低い色
+	spin(@color, 10) 		@colorより色相が10度異なる色
+	spin(@color, -10) 		@colorより色相が-10度異なる色
+	hsl(50,50%,50%) 		新たな色の生成ができる。hsl(色相,彩度,明度)
+	hue(@color) 			@colorの色相を取得
+	saturation(@color) 		@colorの彩度を取得
+	lightness(@color) 		@colorの明度を取得
+	alpha(@color) 			@colorの透明度を取得
+
+================================================================*/
+/*
+	theme color operation
+
+----------------------------------------------*/
+/*
+	gray operation
+
+----------------------------------------------*/
+/*
+	setting opacity
+
+----------------------------------------------*/
+._opacity2 {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/*==============================================================
+
+	3. LAYOUT　レイアウト指定・各種BOX幅指定
+
+================================================================*/
+/*
+	PC site layout operation
+----------------------------------------------*/
+#_layout {
+  /* normal layout ( fix width ) */
+
+  /* liquid layout */
+
+}
+/*
+	multi devise layout
+----------------------------------------------*/
+/*
+	Responsive width setting
+	Convert px based width to % liquid width
+----------------------------------------------*/
+/*
+	% width
+----------------------------------------------*//*
+	min-height , min-width
+----------------------------------------------*/
+/* 
+	grid system
+
+	/css/less/lib/semantic.gsを使用したグリッドシステム
+
+	*直接クラス名を指定しての使用可
+	
+	<div class="grid_sysytem">
+		<ul class="col*">
+			<li>
+				<div>
+					foo
+				</div>
+			</li>
+			…
+		</ul>
+	</div>
+	 
+----------------------------------------------*/
+.grid_system {
+  display: inline;
+  float: left;
+  width: 715px;
+  margin: 0 2.5px;
+  display: block;
+  margin: 0px auto 15px;
+  text-align: center;
+}
+.grid_system  > ul {
+  display: block;
+  width: 725px;
+  margin: 0 -2.5px;
+  *zoom: 1;
+  clear: both;
+  float: none;
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 0px 2px;
+  text-align: center;
+  letter-spacing: -0.2em;
+  /*ポイント*/
+
+  word-spacing: -0.4em;
+  /*ポイント*/
+
+}
+.grid_system  > ul:before,
+.grid_system  > ul:after {
+  content: "";
+  display: table;
+}
+.grid_system  > ul:after {
+  clear: both;
+}
+.grid_system  > ul  > li {
+  position: relative;
+  text-align: center;
+  background: #6a6a6a;
+  vertical-align: top;
+  letter-spacing: 0em;
+  /*ポイント*/
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  /* コンテンツ配置領域 */
+
+}
+.grid_system  > ul  > li  > div {
+  margin: 5px;
+  padding: 5px;
+  background: #fff;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.grid_system  > ul > li {
+  display: inline;
+  float: left;
+  width: 715px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul.col2 > li,
+.grid_system  > ul > li.col2 {
+  display: inline;
+  float: left;
+  width: 355px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul.col3 > li,
+.grid_system  > ul > li.col3 {
+  display: inline;
+  float: left;
+  width: 235px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul.col4 > li,
+.grid_system  > ul > li.col4 {
+  display: inline;
+  float: left;
+  width: 175px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul.col6 > li,
+.grid_system  > ul > li.col6 {
+  display: inline;
+  float: left;
+  width: 114.99999999999999px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul.col12 > li,
+.grid_system  > ul > li.col12 {
+  display: inline;
+  float: left;
+  width: 55.00000000000001px;
+  margin: 0 2.5px;
+}
+.grid_system  > ul > li,
+.grid_system  > ul.col2 > li,
+.grid_system  > ul > li.col2,
+.grid_system  > ul.col3 > li,
+.grid_system  > ul > li.col3,
+.grid_system  > ul.col4 > li,
+.grid_system  > ul > li.col4,
+.grid_system  > ul.col6 > li,
+.grid_system  > ul > li.col6,
+.grid_system  > ul.col12 > li,
+.grid_system  > ul > li.col12 {
+  display: inline-block;
+  float: none;
+  margin-top: 5px;
+}
+/* IE7 and below */
+* html .grid_system  > ul > li,
+* + html .grid_system  > ul > li,
+* html .grid_system  > ul.col2 > li,
+* + html .grid_system  > ul.col2 > li,
+* html .grid_system  > ul > li.col2,
+* + html .grid_system  > ul > li.col2,
+* html .grid_system  > ul.col3 > li,
+* + html .grid_system  > ul.col3 > li,
+* html .grid_system  > ul > li.col3,
+* + html .grid_system  > ul > li.col3,
+* html .grid_system  > ul.col4 > li,
+* + html .grid_system  > ul.col4 > li,
+* html .grid_system  > ul > li.col4,
+* + html .grid_system  > ul > li.col4,
+* html .grid_system  > ul.col6 > li,
+* + html .grid_system  > ul.col6 > li,
+* html .grid_system  > ul > li.col6,
+* + html .grid_system  > ul > li.col6,
+* html .grid_system  > ul.col12 > li,
+* + html .grid_system  > ul.col12 > li,
+* html .grid_system  > ul > li.col12,
+* + html .grid_system  > ul > li.col12 {
+  display: inline;
+  zoom: 1;
+  background: #444444;
+}
+/*	
+	grid system	のリキッドレイアウトバージョン
+	*上記のgrid_systemの幅をリキッド指定に変換
+----------------------------------------------*/
+.grid_liquid {
+  width: 100%;
+}
+.grid_liquid  > ul {
+  width: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.grid_liquid  > ul > li {
+  width: 99.24242424242425%;
+}
+.grid_liquid  > ul.col2 > li,
+.grid_liquid ul > li.col2 {
+  width: 49.24242424242424%;
+}
+.grid_liquid  > ul.col3 > li,
+.grid_liquid ul > li.col3 {
+  width: 32.57575757575758%;
+}
+.grid_liquid  > ul.col4 > li,
+.grid_liquid ul > li.col4 {
+  width: 24.242424242424242%;
+}
+.grid_liquid  > ul.col6 > li,
+.grid_liquid ul > li.col6 {
+  width: 15.909090909090908%;
+}
+.grid_liquid  > ul.col12 > li,
+.grid_liquid ul > li.col12 {
+  width: 7.575757575757574%;
+}
+.grid_liquid  > ul > li,
+.grid_liquid  > ul.col2 > li,
+.grid_liquid ul > li.col2,
+.grid_liquid  > ul.col3 > li,
+.grid_liquid ul > li.col3,
+.grid_liquid  > ul.col4 > li,
+.grid_liquid ul > li.col4,
+.grid_liquid  > ul.col6 > li,
+.grid_liquid ul > li.col6,
+.grid_liquid  > ul.col12 > li,
+.grid_liquid ul > li.col12 {
+  margin-top: 0.7575757575757576%;
+  margin-right: 0.3787878787878788%;
+  margin-left: 0.3787878787878788%;
+}
+* html .grid_liquid  > ul > li,
+* + html .grid_liquid  > ul > li,
+* html .grid_liquid  > ul.col2 > li,
+* + html .grid_liquid  > ul.col2 > li,
+* html .grid_liquid ul > li.col2,
+* + html .grid_liquid ul > li.col2,
+* html .grid_liquid  > ul.col3 > li,
+* + html .grid_liquid  > ul.col3 > li,
+* html .grid_liquid ul > li.col3,
+* + html .grid_liquid ul > li.col3,
+* html .grid_liquid  > ul.col4 > li,
+* + html .grid_liquid  > ul.col4 > li,
+* html .grid_liquid ul > li.col4,
+* + html .grid_liquid ul > li.col4,
+* html .grid_liquid  > ul.col6 > li,
+* + html .grid_liquid  > ul.col6 > li,
+* html .grid_liquid ul > li.col6,
+* + html .grid_liquid ul > li.col6,
+* html .grid_liquid  > ul.col12 > li,
+* + html .grid_liquid  > ul.col12 > li,
+* html .grid_liquid ul > li.col12,
+* + html .grid_liquid ul > li.col12 {
+  margin-top: 0.3787878787878788%;
+  margin-right: 0.1893939393939394%;
+  margin-left: 0.1893939393939394%;
+}
+/*==============================================================
+
+	4. TEXTURE リスト要素設定
+
+================================================================*/
+/*	
+	icons
+	リスト文字列の先頭に配置する画像（icon）の設定
+
+	parameters
+
+	@shape:		iconの形
+	@color:		iconの色
+	@padding:	iconからのpadding
+	@top:		iconの上段からの位置
+	@ext:		icon画像の拡張子
+	@path:		icon画像のパス
+
+	◆icon画像の命名規則
+	ico_(shape)_(color).(ext)
+
+	ex) 文字列の先頭に「ico_arrow_gray.png」をicon画像として使用する場合には
+	下記のような引数を指定する。
+
+	._ico( left, "arrow", "gray" );
+
+----------------------------------------------*/
+/*	
+	Button texture
+	テキストのボタン作成用
+
+	parameters
+
+	@bordercolor:	ボーダー色
+	@gcolor:		gradientの基本色
+	@gcolor_high:	gradient色1
+	@gcolor_low:	gradient色2
+	@param:			lighten,darkenの%指定 (変化させない場合は0%を指定)
+	@color:			文字色
+	@font:			フォントサイズ
+	@round:			角丸px指定
+----------------------------------------------*/
+/*==============================================================
+
+	5. VENDOR-SPECIFIC　各ブラウザ別の指定
+
+================================================================*/
+/* CSS3 pie  */
+/* CSS3 ie-css3  */
+/*==============================================================
+
+	6. MODERNIZR 	modeernizr.jsの設定
+
+================================================================*/
+/*==============================================================
+
+	7. CLEAR FIX
+
+================================================================*/
+/* overflow hidden によるclearfix */
+/*
+	// old clearfix
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+	.clearfix { display: inline-block;}
+	// Hides from IE-mac ￥
+	*html .clearfix { height: 1%;}
+	.clearfix{ display: block;}
+	 // End hides from IE-mac ￥
+*/
+/*==============================================================
+
+	E.Original Mixins
+	
+================================================================*/
+/*------------------------------------------
+
+	File Name:		/css/less/mixins.less
+	Author:         Yoshi.Y
+	Last Modified	2012/09/12
+	Style Info:		write your own mixins, if you need more.
+
+------------------------------------------ */
+/*============================ index ============================
+
+	1. *background
+	2. *
+
+================================================================*/
+/*==============================================================
+
+	1. *
+
+================================================================*/
+/*==============================================================
+
+	F.Base Styles And Common Styles
+
+================================================================*/
+/* ------------------------------------------
+
+	File Name:		/css/less/basic.less
+	Author:         Yoshi.Y
+	Last Modified	2012/09/12
+	Style Info:		base layouts
+
+------------------------------------------ */
+/*============================ index ============================
+
+	A.タグの再定義
+	B.文字サイズの再定義
+	C.リンク設定
+	D.BOX設定
+	E.ヘッダー要素設定
+	F.ナビゲーション要素設定
+	G.フッター要素設定
+	H.パンくず、pagetopボタン設定
+	I.タイトル設定
+	J.共通設定
+	K.サイド要素設定
+	L.メイン要素設定
+	
+================================================================*/
+/*==============================================================
+
+	■A.タグの再定義
+
+================================================================*/
+body {
+  background: #f7f7f7;
+  margin: 0px auto;
+  padding: 0px;
+  font-family: Arial, "メイリオ", "Meiryo", "Helvetica Neue", Helvetica, "verdana", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", sans-serif;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.5;
+  color: #444;
+  border-top: 5px solid #0058DD;
+}
+html,
+body {
+  height: 100%;
+}
+/*==============================================================
+
+	■B.文字サイズの再定義
+
+================================================================*/
+/* 基準サイズ指定（通常は13px） */
+body {
+  font-size: 13px;
+  /* モダンブラウザ向け */
+}
+* html body {
+  font: x-small;
+  /* IE 6 */
+}
+* + html body {
+  font-size: small;
+  /* IE 7向け */
+}
+/*==============================================================
+
+	■C.リンク設定
+
+================================================================*/
+a {
+  color: #1a4685;
+  -webkit-tap-highlight-color: #4482da;
+  outline: none;
+  border-style: none;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  text-decoration: none;
+}
+/*==============================================================
+
+	■D.BOX設定
+
+	各BOXの基本幅・paddingは下記のmixinで指定する。
+	
+	#_layout　> ._dbox( foo, bar )
+	
+	foo:BOX要素
+	bar:float要素( none,left,right )
+
+	各BOX要素のデフォルト値は下記の通り。詳細はvariables.lessを参照のこと。
+	----------------------------------------------
+	._dbox( entire, @float: none, @padding: 0% )
+	._dbox( contents, @float: none )
+	._dbox( gnavi, @float: none )
+	._dbox( gnavi-piece, @float: left )
+	._dbox( mainwrap, @float: right )
+	._dbox( main, @float: right )
+	._dbox( section, @float: none )
+	._dbox( second, @float: left )
+	._dbox( third, @float: right )
+	----------------------------------------------
+
+================================================================*/
+/*==============================================================
+
+	■E.ヘッダー要素設定
+
+================================================================*/
+#header_wrap {
+  background: #FFF;
+  width: 100%;
+}
+#header_wrap #header {
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+}
+#header_wrap #header #header_main {
+  overflow: hidden;
+  width: 980px;
+  padding: 10px 0 40px;
+}
+#header_wrap #header #header_main #logo {
+  background: url('https://www.jbatibor.or.jp/img/common/img_common_logo.jpg') no-repeat left center;
+  float: left;
+  width: 332px;
+  height: 79px;
+}
+#header_wrap #header #header_main #logo a {
+  display: block;
+  width: 332px;
+  height: 79px;
+  text-indent: -9999px;
+}
+#header_wrap #header #header_main .box_search {
+  background: #F7F7F7;
+  float: right;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+#header_wrap #header #header_main .box_search .inputtext {
+  background: #FFF;
+  width: 201px;
+  height: 26px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  transition: all  0.2s ease;
+  font-family: Arial, "メイリオ", "Meiryo", "Helvetica Neue", Helvetica, "verdana", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", sans-serif;
+}
+#header_wrap #header #header_main .box_search .inputtext:hover,
+#header_wrap #header #header_main .box_search .inputtext:focus {
+  background: #EEF4FF;
+}
+#header_wrap #header #header_main .box_search #search_btn {
+  vertical-align: top;
+  text-align: center;
+}
+#header_wrap #header #header_sub {
+  overflow: hidden;
+  display: inline-block;
+  background: #0058DD;
+  float: right;
+  margin-top: -5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+* + html #header_wrap #header #header_sub {
+  display: inline;
+  zoom: 1;
+}
+#header_wrap #header #header_sub #box_fontsize {
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+}
+* + html #header_wrap #header #header_sub #box_fontsize {
+  display: inline;
+  zoom: 1;
+}
+#header_wrap #header #header_sub #box_fontsize .middle,
+#header_wrap #header #header_sub #box_fontsize .large {
+  display: inline-block;
+  background: #ddd;
+  margin: 0 1px;
+  padding: 0 3px;
+  border: 1px solid #bbb;
+  color: #666;
+  border-radius: 5px;
+}
+#header_wrap #header #header_sub #box_fontsize .middle a,
+#header_wrap #header #header_sub #box_fontsize .large a {
+  text-decoration: none;
+}
+* + html #header_wrap #header #header_sub #box_fontsize .middle,
+* + html #header_wrap #header #header_sub #box_fontsize .large {
+  display: inline;
+  zoom: 1;
+}
+#header_wrap #header #header_sub #box_fontsize .tit_fontsize {
+  margin: 0 2px;
+  color: #FFF;
+}
+#header_wrap #header #header_sub .ul_sub {
+  display: inline-block;
+  float: right;
+}
+* + html #header_wrap #header #header_sub .ul_sub {
+  display: inline;
+  zoom: 1;
+}
+#header_wrap #header #header_sub .ul_sub li {
+  display: inline-block;
+  margin-left: 10px;
+}
+* + html #header_wrap #header #header_sub .ul_sub li {
+  display: inline;
+  zoom: 1;
+}
+#header_wrap #header #header_sub .ul_sub li:first-child {
+  margin-left: 0;
+}
+#header_wrap #header #header_sub .ul_sub li a {
+  display: block;
+  background: url('https://www.jbatibor.or.jp/img/common/ico_common_arrow_white.png') no-repeat left 50%;
+  padding-left: 20px;
+  color: #FFF;
+  text-decoration: none;
+}
+#header_wrap #header #header_sub .ul_sub li a:hover {
+  text-decoration: underline;
+}
+#main_visual {
+  background: url('https://www.jbatibor.or.jp/img/top/img_top_main.jpg') no-repeat left center;
+  width: 980px;
+  height: 235px;
+  margin: 0 auto 20px;
+  padding-top: 10px;
+}
+#main_visual p {
+  padding: 15px 20px 15px 440px;
+  color: #454583;
+  font-size: 150%;
+  letter-spacing: 0.1em;
+}
+.box_attention {
+  background: #FFF;
+  width: 908px;
+  margin: 0 auto 20px;
+  padding: 5px 15px;
+  border: 1px solid #ddd;
+}
+.box_attention p {
+  background: url('https://www.jbatibor.or.jp/img/common/ico_common_info.png') no-repeat left center;
+  padding: 10px 10px 10px 35px;
+  font-size: 108%;
+}
+.modal {
+  position: relative;
+  display: none;
+  z-index: 9999;
+  width: 100%;
+  margin: 0 auto;
+}
+.modal .modal_cont {
+  position: absolute;
+  background: #FFF;
+  z-index: 10000;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 5px solid #0058DD;
+}
+.modal .modal_cont .modal_cont_in {
+  width: 980px;
+  margin: 0 auto;
+}
+.modal .modal_cont .modal_logo {
+  padding: 25px 0;
+}
+.modal .modal_cont .modal_tit {
+  background: #ffffff url('https://www.jbatibor.or.jp/img/common/ico_common_headline.gif') no-repeat 15px 50%;
+  padding: 5px 10px 5px 45px;
+  border: 1px solid #0058DD;
+  border-width: 2px 0px 1px 0px;
+  font-weight: bold;
+  font-size: 131%;
+}
+.modal .modal_cont p {
+  margin: 0 auto 25px;
+}
+.modal .modal_cont p.p_box {
+  padding: 0 1em;
+}
+.modal .modal_cont p.p_box2 {
+  padding: 0 2em;
+}
+.modal .modal_ul {
+  overflow: hidden;
+  width: 500px;
+  margin: 100px auto;
+  padding: 0;
+}
+.modal .modal_ul li {
+  float: left;
+  width: 200px;
+  margin: 0 25px;
+  font-size: 150%;
+  list-style: none;
+}
+.modal .modal_ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #0058DD;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.modal .modal_ul li a:hover {
+  background: #C8EEFB;
+}
+.modal p {
+  margin: 0 auto 20px;
+}
+.modal a {
+  cursor: pointer;
+}
+.modal .cokie_alert {
+  background: #D1EFB7;
+  padding: 10px;
+  color: #FF3300;
+  font-weight: bold;
+  font-size: 93%;
+  border: 2px solid #72B43D;
+}
+/*==============================================================
+
+	■F.ナビゲーション要素設定
+
+================================================================*/
+/* グローバルナビ */
+#nav {
+  overflow: hidden;
+  background: #e5e5e5 url('https://www.jbatibor.or.jp/img/common/bkg_common_gnav.jpg') repeat-x left 50%;
+  margin-bottom: 10px;
+  padding: 5px 0 ;
+}
+#nav ul {
+  width: 980px;
+  margin: 0 auto;
+}
+#nav ul li {
+  float: left;
+  background: #fff;
+  width: 193px;
+  margin-right: 1px;
+  padding: 1px;
+}
+#nav ul li a {
+  display: block;
+  background: #ffffff url('https://www.jbatibor.or.jp/img/common/bkg_common_navi_off.jpg') repeat-x left bottom;
+  padding: 12px 0;
+  color: #333;
+  font-size: 118%;
+  text-align: center;
+  text-decoration: none;
+}
+#nav ul li.active a {
+  background: #eeeeee url('https://www.jbatibor.or.jp/img/common/bkg_common_navi_on.jpg') repeat-x left bottom;
+  border-left: 6px solid #0058DD;
+  text-indent: -6px;
+}
+#nav ul li:hover a {
+  background: #eeeeee url('https://www.jbatibor.or.jp/img/common/bkg_common_navi_on.jpg') repeat-x left bottom;
+}
+/*==============================================================
+
+	■G.フッター要素設定
+
+================================================================*/
+#footer_wrap {
+  background: #fff;
+  width: 100%;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 35px solid #ccc;
+}
+#footer_wrap #footer {
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+#footer_wrap #footer #ul_footer {
+  float: left;
+  display: inline-block;
+  border-left: 1px solid #ccc;
+}
+* + html #footer_wrap #footer #ul_footer {
+  display: inline;
+  zoom: 1;
+}
+#footer_wrap #footer #ul_footer li {
+  display: inline-block;
+  padding: 0 8px;
+  border-right: 1px solid #ccc;
+}
+* + html #footer_wrap #footer #ul_footer li {
+  display: inline;
+  zoom: 1;
+}
+#footer_wrap #footer #ul_footer li a {
+  color: #666;
+}
+#footer_wrap #footer #copyright {
+  display: inline-block;
+  float: right;
+  color: #666;
+  font-size: 93%;
+}
+* + html #footer_wrap #footer #copyright {
+  display: inline;
+  zoom: 1;
+}
+/*==============================================================
+
+	■H.パンくず、pagetopボタン設定
+
+================================================================*/
+/* パンくずメニュー */
+#panlist {
+  width: 980px;
+  margin: 0 auto 20px;
+}
+#panlist li {
+  display: inline-block;
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_triangle_gray.png") no-repeat left center;
+  margin-right: 15px;
+  padding-left: 20px;
+}
+#panlist li:first-child {
+  background: none;
+  padding-left: 0;
+}
+* + html #panlist li {
+  display: inline;
+  zoom: 1;
+}
+.content-nav {
+  text-align: center;
+}
+.content-nav span {
+  margin: 0 5px;
+}
+/* ページトップへ戻る */
+#pagetop {
+  display: none;
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+  z-index: 1000;
+}
+#pagetop a {
+  background: #000066 url("https://www.jbatibor.or.jp/img/common/ico_common_totop.png") no-repeat center center;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: block;
+  height: 36px;
+  padding-top: 9px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in 0s;
+  width: 45px;
+  text-indent: -9999px;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+#pagetop a:hover {
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+}
+/*==============================================================
+
+	■I.タイトル設定
+
+================================================================*/
+.box_article_content h1,
+.box_article_content_en h1 {
+  background: #ffffff url("https://www.jbatibor.or.jp/img/common/bkg_common_tit_large.png") no-repeat left center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  padding: 25px 1px 25px 30px;
+  font-size: 174%;
+  color: #006;
+  border: 1px solid #ccc;
+}
+.box_article_content h1:first-child,
+.box_article_content_en h1:first-child {
+  margin-top: 0;
+}
+.box_article_content h2,
+.box_article_content_en h2 {
+  background: #ffffff url('https://www.jbatibor.or.jp/img/common/ico_common_headline.gif') no-repeat 15px 50%;
+  margin: 40px 10px 20px;
+  padding: 5px 10px 5px 45px;
+  border: 1px solid #0058DD;
+  border-width: 2px 0px 1px 0px;
+  font-weight: bold;
+  font-size: 131%;
+}
+.box_article_content h3,
+.box_article_content_en h3 {
+  margin: 25px 25px 20px;
+  padding: 0 10px;
+  border-left: 5px solid #0058DD;
+  font-weight: bold;
+  font-size: 108%;
+}
+/*==============================================================
+
+	■J.共通設定
+
+================================================================*/
+/* pdf要素
+----------------------------------------------------------- */
+a[href$=".pdf"] {
+  background: url("https://www.jbatibor.or.jp/img/common/pdf.gif") no-repeat right 50%;
+  padding-right: 20px;
+}
+/* doc要素
+----------------------------------------------------------- */
+a[href$=".doc"] {
+  background: url("https://www.jbatibor.or.jp/img/common/doc.gif") no-repeat right 50%;
+  padding-right: 20px;
+}
+/* xls要素
+----------------------------------------------------------- */
+a[href$=".xls"] {
+  background: url("https://www.jbatibor.or.jp/img/common/xls.gif") no-repeat right 50%;
+  padding-right: 20px;
+}
+.ico_arrow_blue {
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat left 50%;
+  padding-left: 25px;
+}
+.box_article_content b {
+  font-weight: bold;
+}
+.box_article_content em {
+  font-style: italic;
+}
+/*==============================================================
+
+	■K.サイド要素設定
+
+================================================================*/
+#aside #sidemenu_area {
+  background: #eaeaea;
+  margin-bottom: 35px;
+  padding: 1px;
+}
+#aside #sidemenu_area .ul_sidemenu {
+  padding: 0px 5px;
+  border: 1px solid #fff;
+}
+#aside #sidemenu_area .ul_sidemenu li {
+  padding: 5px 0;
+  border-top: 1px dotted #bbb;
+}
+#aside #sidemenu_area .ul_sidemenu li:first-child {
+  border-top: none;
+}
+#aside #sidemenu_area .ul_sidemenu li a {
+  display: block;
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat 8px 13px;
+  padding: 10px 10px 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 113%;
+}
+#aside #sidemenu_area .ul_sidemenu li a:hover {
+  background: #d4e0ef url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat 8px 13px;
+  color: #006;
+}
+#aside #sidemenu_area .ul_sidemenu li.active_side_en a {
+  background: #000066;
+  padding-left: 13px;
+  color: #FFF;
+  font-weight: bold;
+}
+#aside #sidemenu_area .ul_sidemenu li.active_side a {
+  background: #d4e0ef url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_purple.png") no-repeat 8px 13px;
+  color: #006;
+}
+#aside #bnr_area {
+  width: 220px;
+  background: #efefef;
+  padding: 10px 10px 0 10px;
+}
+#aside #bnr_area a {
+  text-decoration: none;
+  color: #333;
+}
+#aside #bnr_area a:hover {
+  text-decoration: underline;
+}
+#aside #bnr_area a:hover img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#aside #bnr_area .dl_bnr {
+  margin-bottom: 10px;
+}
+#aside #bnr_area .dl_bnr dd {
+  background: #FFF;
+  padding: 8px;
+  border-bottom: 1px dotted #aaa;
+}
+#aside #bnr_area .ul_bnr {
+  padding-top: 10px;
+}
+#aside #bnr_area .ul_bnr li {
+  margin-bottom: 10px;
+}
+/*==============================================================
+
+	■L.メイン要素設定
+
+================================================================*/
+#content_wrap {
+  width: 980px;
+  margin: 0 auto 40px;
+  padding-top: 10px;
+  *zoom: 1;
+}
+#content_wrap:before,
+#content_wrap:after {
+  content: "";
+  display: table;
+}
+#content_wrap:after {
+  clear: both;
+}
+#content_wrap #content_left {
+  float: left;
+  width: 720px;
+}
+#content_wrap #aside {
+  float: right;
+  width: 240px;
+}
+#content_wrap_en {
+  width: 980px;
+  margin: 0 auto 40px;
+  padding-top: 10px;
+  *zoom: 1;
+}
+#content_wrap_en:before,
+#content_wrap_en:after {
+  content: "";
+  display: table;
+}
+#content_wrap_en:after {
+  clear: both;
+}
+#content_wrap_en #content_left {
+  float: right;
+  width: 720px;
+}
+#content_wrap_en #aside {
+  float: left;
+  width: 240px;
+}
+/* 
+
+ 		TOP
+
+ 				 */
+#content_wrap .box_article,
+#content_wrap_en .box_article {
+  margin-bottom: 20px;
+}
+#content_wrap .tit_middle_news,
+#content_wrap_en .tit_middle_news {
+  overflow: hidden;
+  background: #ffffff url('https://www.jbatibor.or.jp/img/common/bkg_common_headline_middle.jpg') repeat-x left bottom;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+}
+#content_wrap .tit_middle_news span,
+#content_wrap_en .tit_middle_news span {
+  padding-left: 15px;
+  font-size: 123%;
+  border-left: 6px solid #0058DD;
+}
+#content_wrap .tit_middle_news a,
+#content_wrap_en .tit_middle_news a {
+  display: inline-block;
+  float: right;
+  padding-top: 2px;
+  color: #333;
+  text-decoration: none;
+}
+#content_wrap .tit_middle_news a:hover,
+#content_wrap_en .tit_middle_news a:hover {
+  text-decoration: underline;
+}
+#content_wrap .ul_news,
+#content_wrap_en .ul_news {
+  overflow: auto;
+  height: 300px;
+}
+#content_wrap .ul_news li,
+#content_wrap_en .ul_news li {
+  background: #FFF;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+#content_wrap .ul_news li dl,
+#content_wrap_en .ul_news li dl {
+  overflow: hidden;
+}
+#content_wrap .ul_news li dl dt,
+#content_wrap_en .ul_news li dl dt {
+  float: left;
+  background: url('https://www.jbatibor.or.jp/img/common/ico_common_arrow_gray.png') no-repeat right 50%;
+  width: 115px;
+  padding-left: 25px;
+  font-size: 108%;
+}
+#content_wrap .ul_news li dl dd,
+#content_wrap_en .ul_news li dl dd {
+  float: left;
+  width: 520px;
+  padding: 0 20px;
+  font-size: 108%;
+}
+#content_wrap #box_submenu_wrap,
+#content_wrap_en #box_submenu_wrap {
+  overflow: hidden;
+}
+#content_wrap #box_submenu_wrap .box_submenu,
+#content_wrap_en #box_submenu_wrap .box_submenu {
+  background: #ddd;
+  width: 344px;
+  margin-bottom: 20px;
+  padding: 0 3px 3px 3px;
+  border-top: 5px solid #0058DD;
+}
+#content_wrap #box_submenu_wrap .box_submenu div,
+#content_wrap_en #box_submenu_wrap .box_submenu div {
+  background: #FFF;
+  padding: 5px 10px 0 10px;
+}
+#content_wrap #box_submenu_wrap .box_submenu .tit_middle_top,
+#content_wrap_en #box_submenu_wrap .box_submenu .tit_middle_top {
+  background: url('https://www.jbatibor.or.jp/img/common/ico_common_headline.gif') no-repeat 4px 7px;
+  padding: 4px 0 6px 30px;
+  margin-bottom: 12px;
+  border-bottom: 1px dotted #ddd;
+  font-size: 131%;
+  font-weight: bold;
+}
+#content_wrap #box_submenu_wrap .box_submenu .tit_middle_top a,
+#content_wrap_en #box_submenu_wrap .box_submenu .tit_middle_top a {
+  text-decoration: none;
+  color: #333;
+}
+#content_wrap #box_submenu_wrap .box_submenu .tit_middle_top a:hover,
+#content_wrap_en #box_submenu_wrap .box_submenu .tit_middle_top a:hover {
+  text-decoration: underline;
+}
+#content_wrap #box_submenu_wrap .box_submenu p,
+#content_wrap_en #box_submenu_wrap .box_submenu p {
+  margin-bottom: 12px;
+}
+#content_wrap #box_submenu_wrap .box_submenu .ul_submenu_top li,
+#content_wrap_en #box_submenu_wrap .box_submenu .ul_submenu_top li {
+  display: inline-block;
+  margin: 0 20px 10px 0;
+}
+* + html #content_wrap #box_submenu_wrap .box_submenu .ul_submenu_top li,
+* + html #content_wrap_en #box_submenu_wrap .box_submenu .ul_submenu_top li {
+  display: inline;
+  zoom: 1;
+}
+#content_wrap #box_submenu_wrap .box_submenu .ul_submenu_top li a,
+#content_wrap_en #box_submenu_wrap .box_submenu .ul_submenu_top li a {
+  display: block;
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat left 2px;
+  padding-left: 25px;
+  font-size: 108%;
+  text-decoration: none;
+}
+#content_wrap #box_submenu_wrap .box_submenu .ul_submenu_top li a:hover,
+#content_wrap_en #box_submenu_wrap .box_submenu .ul_submenu_top li a:hover {
+  text-decoration: underline;
+}
+#content_wrap_en .ul_news {
+  overflow: auto;
+  height: 450px;
+}
+/*
+
+ 下層共通
+
+*/
+#content_wrap .box_article_content,
+#content_wrap_en .box_article_content {
+  margin-bottom: 20px;
+}
+#content_wrap .box_article_content b,
+#content_wrap_en .box_article_content b,
+#content_wrap .box_article_content strong,
+#content_wrap_en .box_article_content strong {
+  font-weight: bold;
+}
+#content_wrap .box_article_content p,
+#content_wrap_en .box_article_content p {
+  margin-bottom: 15px;
+  padding: 0 25px;
+}
+#content_wrap .box_article_content ul,
+#content_wrap_en .box_article_content ul {
+  margin: 0 25px 15px;
+}
+#content_wrap .box_article_content ul.ul_news,
+#content_wrap_en .box_article_content ul.ul_news {
+  margin: 0 ;
+}
+#content_wrap .box_article_content ul li,
+#content_wrap_en .box_article_content ul li {
+  margin-bottom: 10px;
+}
+#content_wrap .box_article_content ul li:last-child,
+#content_wrap_en .box_article_content ul li:last-child {
+  margin-bottom: 0;
+}
+#content_wrap .box_article_content ul.ul_indent01 li,
+#content_wrap_en .box_article_content ul.ul_indent01 li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+#content_wrap .box_article_content ul.ul_indent02 li,
+#content_wrap_en .box_article_content ul.ul_indent02 li {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+#content_wrap .box_article_content ul.ul_indent2h li,
+#content_wrap_en .box_article_content ul.ul_indent2h li {
+  padding-left: 2.5em;
+  text-indent: -2.5em;
+}
+#content_wrap .box_article_content ul.ul_indent03 li,
+#content_wrap_en .box_article_content ul.ul_indent03 li {
+  padding-left: 3em;
+  text-indent: -3em;
+}
+#content_wrap .box_article_content ol,
+#content_wrap_en .box_article_content ol {
+  margin: 0 25px 15px;
+  list-style-position: inside;
+}
+#content_wrap .box_article_content table,
+#content_wrap_en .box_article_content table {
+  width: 680px;
+  margin: 0 auto 15px;
+  border-right: 1px solid #ccc;
+  border-collapse: separate;
+}
+#content_wrap .box_article_content table tbody th,
+#content_wrap_en .box_article_content table tbody th {
+  background: #f1f1f1;
+  color: #333;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#content_wrap .box_article_content table tbody th:first-child,
+#content_wrap_en .box_article_content table tbody th:first-child {
+  border-left: 1px solid #ccc;
+}
+#content_wrap .box_article_content table th,
+#content_wrap_en .box_article_content table th {
+  background: #0058DD;
+  padding: 8px 5px;
+  color: #fff;
+  border-right: 1px solid #fff;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #fff;
+}
+#content_wrap .box_article_content table th:first-child,
+#content_wrap_en .box_article_content table th:first-child {
+  border-left: 1px solid #0058DD;
+}
+#content_wrap .box_article_content table td,
+#content_wrap_en .box_article_content table td {
+  padding: 8px 5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+#content_wrap .box_article_content a.link_arrow,
+#content_wrap_en .box_article_content a.link_arrow {
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat left 50%;
+  padding: 0px 0px 0px 20px;
+  text-decoration: none;
+}
+#content_wrap .box_article_content a.link_arrow:hover,
+#content_wrap_en .box_article_content a.link_arrow:hover {
+  background: url("https://www.jbatibor.or.jp/img/common/ico_common_arrow_blue.png") no-repeat left 50%;
+  color: #006;
+}
+/*------------------------------------------
+
+	File Name:		/css/less/commonstyles.less
+	Author:         Yoshi.Y
+	Last Modified	2012/09/10
+	Style Info:		common styles
+
+------------------------------------------ */
+/*============================ index ============================
+
+	A.テキストスタイル
+	B.リンク,ボタン配置
+	C.ボックス配置
+	D.テーブル配置
+	E.アンカーリンク
+	F.リスト要素設定
+	G.入力フォームスタイル
+	H.画像表示スタイル
+	I.色設定
+	J.ボーダー,マージン,パディング,幅
+	K.その他　共通スタイル設定
+
+================================================================*/
+/*==============================================================
+
+	■A.テキストスタイル
+
+================================================================*/
+/* 共通段落設定 */
+.section small,
+section small {
+  font-size: 84.61538461538461%;
+}
+/* 左右寄せ */
+.left {
+  text-align: left		!important;
+}
+.right {
+  text-align: right		!important;
+}
+.center {
+  text-align: center	!important;
+}
+/* 強調文字 */
+.bold {
+  font-weight: bold		!important;
+}
+.italic {
+  font-style: italic	!important;
+}
+/* テキストデコレーション */
+.underline {
+  text-decoration: underline !important;
+}
+/* webフォント */
+._boxsizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*	文字サイズ指定
+	http://developer.yahoo.com/yui/examples/fonts/fonts-size_source.html
+
+	.t9 { font-size: 69.2%	;}
+	.t10 { font-size: 77%	;}
+	.t11 { font-size: 83.3%	;}
+	.t12 { font-size: 93%	;}
+	.t13 { font-size: 100%	;}
+	.t14 { font-size: 108%	;}
+	.t15 { font-size: 116%	;}
+	.t16 { font-size: 123.1%;}
+	.t17 { font-size: 131%	;}
+	.t18 { font-size: 138.5%;}
+	.t19 { font-size: 146.5%;}
+	.t20 { font-size: 153.9%;}
+	.t21 { font-size: 161.6%;}
+	.t22 { font-size: 167%	;}
+	.t23 { font-size: 174%	;}
+	.t24 { font-size: 182%	;}
+	.t25 { font-size: 189%	;}
+	.t26 { font-size: 197%	;}
+*/
+.t9 {
+  font-size: 69.23076923076923% !important;
+}
+.t10 {
+  font-size: 76.92307692307693% !important;
+}
+.t11 {
+  font-size: 84.61538461538461% !important;
+}
+.t12 {
+  font-size: 92.3076923076923% !important;
+}
+.t13 {
+  font-size: 100% !important;
+}
+.t14 {
+  font-size: 107.6923076923077% !important;
+}
+.t15 {
+  font-size: 115.38461538461537% !important;
+}
+.t16 {
+  font-size: 123.07692307692308% !important;
+}
+.t17 {
+  font-size: 130.76923076923077% !important;
+}
+.t18 {
+  font-size: 138.46153846153845% !important;
+}
+.t19 {
+  font-size: 146.15384615384613% !important;
+}
+.t20 {
+  font-size: 153.84615384615387% !important;
+}
+.t21 {
+  font-size: 161.53846153846155% !important;
+}
+.t22 {
+  font-size: 169.23076923076923% !important;
+}
+.t23 {
+  font-size: 176.9230769230769% !important;
+}
+.t24 {
+  font-size: 184.6153846153846% !important;
+}
+.t25 {
+  font-size: 192.30769230769232% !important;
+}
+.t26 {
+  font-size: 200% !important;
+}
+/* 文字色系 */
+.white {
+  color: #fff		!important;
+}
+.red {
+  color: #9d261d !important;
+}
+.yellow {
+  color: #ffc40d !important;
+}
+.orange {
+  color: #f89406 !important;
+}
+.pink {
+  color: #c3325f !important;
+}
+.purple {
+  color: #7a43b6 !important;
+}
+.blue {
+  color: #049cdb !important;
+}
+.green {
+  color: #46a546 !important;
+}
+.gray {
+  color: #808080 !important;
+}
+.black {
+  color: #000000 !important;
+}
+.attention {
+  color: #EA4701	!important;
+}
+/*==============================================================
+
+	■B.リンク,ボタン配置
+
+================================================================*/
+/* 基本ボタンスタイル（テキストで作成するボタン） */
+/*==============================================================
+
+	■C.ボックス配置
+
+================================================================*/
+/*
+	table cell	テーブルレイアウト
+----------------------------------------------*/
+/*
+	左右フロート 
+----------------------------------------------*/
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+/*==============================================================
+
+	■D.テーブル配置
+
+================================================================*/
+/*==============================================================
+
+	■E.アンカーリンク
+
+================================================================*/
+/*==============================================================
+
+	■F.リスト要素設定
+
+================================================================*/
+/*==============================================================
+
+	■G.入力フォームスタイル
+
+================================================================*/
+/*==============================================================
+
+	■H.画像表示スタイル
+
+================================================================*/
+/*==============================================================
+
+	■I.色設定
+
+================================================================*/
+/* テーマカラー */
+.theme {
+  color: #444444 !important;
+}
+.utheme {
+  color: #444444 !important;
+}
+.theme_l5 {
+  color: #515151 !important;
+}
+.theme_l10 {
+  color: #5e5e5e !important;
+}
+.theme_l15 {
+  color: #6a6a6a !important;
+}
+.theme_l20 {
+  color: #777777 !important;
+}
+.theme_l25 {
+  color: #848484 !important;
+}
+.theme_l30 {
+  color: #919191 !important;
+}
+.theme_l35 {
+  color: #9d9d9d !important;
+}
+.theme_l40 {
+  color: #aaaaaa !important;
+}
+.theme_l45 {
+  color: #b7b7b7 !important;
+}
+.theme_d5 {
+  color: #373737 !important;
+}
+.theme_d10 {
+  color: #2b2b2b !important;
+}
+.theme_d15 {
+  color: #1e1e1e !important;
+}
+.theme_d20 {
+  color: #111111 !important;
+}
+.theme_d25 {
+  color: #040404 !important;
+}
+.theme_d30 {
+  color: #000000 !important;
+}
+.theme_d35 {
+  color: #000000 !important;
+}
+.theme_d40 {
+  color: #000000 !important;
+}
+.theme_d45 {
+  color: #000000 !important;
+}
+.utheme_l5 {
+  color: #515151 !important;
+}
+.utheme_l10 {
+  color: #5e5e5e !important;
+}
+.utheme_l15 {
+  color: #6a6a6a !important;
+}
+.utheme_l20 {
+  color: #777777 !important;
+}
+.utheme_l25 {
+  color: #848484 !important;
+}
+.utheme_l30 {
+  color: #919191 !important;
+}
+.utheme_l35 {
+  color: #9d9d9d !important;
+}
+.utheme_l40 {
+  color: #aaaaaa !important;
+}
+.utheme_l45 {
+  color: #b7b7b7 !important;
+}
+.utheme_d5 {
+  color: #373737 !important;
+}
+.utheme_d10 {
+  color: #2b2b2b !important;
+}
+.utheme_d15 {
+  color: #1e1e1e !important;
+}
+.utheme_d20 {
+  color: #111111 !important;
+}
+.utheme_d25 {
+  color: #040404 !important;
+}
+.utheme_d30 {
+  color: #000000 !important;
+}
+.utheme_d35 {
+  color: #000000 !important;
+}
+.utheme_d40 {
+  color: #000000 !important;
+}
+.utheme_d45 {
+  color: #000000 !important;
+}
+/* テーマカラー 背景 */
+.bg_theme {
+  background-color: #444444 !important;
+}
+.bg_utheme {
+  background-color: #444444 !important;
+}
+.bg_theme_l5 {
+  background-color: #515151 !important;
+}
+.bg_theme_l10 {
+  background-color: #5e5e5e !important;
+}
+.bg_theme_l15 {
+  background-color: #6a6a6a !important;
+}
+.bg_theme_l20 {
+  background-color: #777777 !important;
+}
+.bg_theme_l25 {
+  background-color: #848484 !important;
+}
+.bg_theme_l30 {
+  background-color: #919191 !important;
+}
+.bg_theme_l35 {
+  background-color: #9d9d9d !important;
+}
+.bg_theme_l40 {
+  background-color: #aaaaaa !important;
+}
+.bg_theme_l45 {
+  background-color: #b7b7b7 !important;
+}
+.bg_theme_d5 {
+  background-color: #373737 !important;
+}
+.bg_theme_d10 {
+  background-color: #2b2b2b !important;
+}
+.bg_theme_d15 {
+  background-color: #1e1e1e !important;
+}
+.bg_theme_d20 {
+  background-color: #111111 !important;
+}
+.bg_theme_d25 {
+  background-color: #040404 !important;
+}
+.bg_theme_d30 {
+  background-color: #000000 !important;
+}
+.bg_theme_d35 {
+  background-color: #000000 !important;
+}
+.bg_theme_d40 {
+  background-color: #000000 !important;
+}
+.bg_theme_d45 {
+  background-color: #000000 !important;
+}
+.bg_utheme_l5 {
+  background-color: #515151 !important;
+}
+.bg_utheme_l10 {
+  background-color: #5e5e5e !important;
+}
+.bg_utheme_l15 {
+  background-color: #6a6a6a !important;
+}
+.bg_utheme_l20 {
+  background-color: #777777 !important;
+}
+.bg_utheme_l25 {
+  background-color: #848484 !important;
+}
+.bg_utheme_l30 {
+  background-color: #919191 !important;
+}
+.bg_utheme_l35 {
+  background-color: #9d9d9d !important;
+}
+.bg_utheme_l40 {
+  background-color: #aaaaaa !important;
+}
+.bg_utheme_l45 {
+  background-color: #b7b7b7 !important;
+}
+.bg_utheme_d5 {
+  background-color: #373737 !important;
+}
+.bg_utheme_d10 {
+  background-color: #2b2b2b !important;
+}
+.bg_utheme_d15 {
+  background-color: #1e1e1e !important;
+}
+.bg_utheme_d20 {
+  background-color: #111111 !important;
+}
+.bg_utheme_d25 {
+  background-color: #040404 !important;
+}
+.bg_utheme_d30 {
+  background-color: #000000 !important;
+}
+.bg_utheme_d35 {
+  background-color: #000000 !important;
+}
+.bg_utheme_d40 {
+  background-color: #000000 !important;
+}
+.bg_utheme_d45 {
+  background-color: #000000 !important;
+}
+/* グレー */
+.themegray {
+  color: #808080 !important;
+}
+.themegray_l5 {
+  color: #8c8c8c !important;
+}
+.themegray_l10 {
+  color: #999999 !important;
+}
+.themegray_l15 {
+  color: #a6a6a6 !important;
+}
+.themegray_l20 {
+  color: #b3b3b3 !important;
+}
+.themegray_l25 {
+  color: #bfbfbf !important;
+}
+.themegray_l30 {
+  color: #cccccc !important;
+}
+.themegray_l35 {
+  color: #d9d9d9 !important;
+}
+.themegray_l40 {
+  color: #e6e6e6 !important;
+}
+.themegray_l45 {
+  color: #f2f2f2 !important;
+}
+.themegray_d5 {
+  color: #595959 !important;
+}
+.themegray_d10 {
+  color: #666666 !important;
+}
+.themegray_d15 {
+  color: #595959 !important;
+}
+.themegray_d20 {
+  color: #4d4d4d !important;
+}
+.themegray_d25 {
+  color: #404040 !important;
+}
+.themegray_d30 {
+  color: #333333 !important;
+}
+.themegray_d35 {
+  color: #262626 !important;
+}
+.themegray_d40 {
+  color: #191919 !important;
+}
+.themegray_d45 {
+  color: #0d0d0d !important;
+}
+/* グレーカラー 背景 */
+.bg_themegray {
+  background-color: #808080 !important;
+}
+.bg_themegray_l5 {
+  background-color: #8c8c8c !important;
+}
+.bg_themegray_l10 {
+  background-color: #999999 !important;
+}
+.bg_themegray_l15 {
+  background-color: #a6a6a6 !important;
+}
+.bg_themegray_l20 {
+  background-color: #b3b3b3 !important;
+}
+.bg_themegray_l25 {
+  background-color: #bfbfbf !important;
+}
+.bg_themegray_l30 {
+  background-color: #cccccc !important;
+}
+.bg_themegray_l35 {
+  background-color: #d9d9d9 !important;
+}
+.bg_themegray_l40 {
+  background-color: #e6e6e6 !important;
+}
+.bg_themegray_l45 {
+  background-color: #f2f2f2 !important;
+}
+.bg_themegray_d5 {
+  background-color: #737373 !important;
+}
+.bg_themegray_d10 {
+  background-color: #666666 !important;
+}
+.bg_themegray_d15 {
+  background-color: #595959 !important;
+}
+.bg_themegray_d20 {
+  background-color: #4d4d4d !important;
+}
+.bg_themegray_d25 {
+  background-color: #404040 !important;
+}
+.bg_themegray_d30 {
+  background-color: #333333 !important;
+}
+.bg_themegray_d35 {
+  background-color: #262626 !important;
+}
+.bg_themegray_d40 {
+  background-color: #191919 !important;
+}
+.bg_themegray_d45 {
+  background-color: #0d0d0d !important;
+}
+/*==============================================================
+
+	■J.ボーダー,マージン,パディング,幅
+
+	 *タグに直接指定して使用する事を想定。mixinとしては使用しないこと。
+
+================================================================*/
+/*	ボーダー設定
+------------------------------------------ */
+/* border無し */
+.no_border {
+  border: none	!important;
+}
+/* テーマカラーボーダー */
+.b1_theme {
+  border: 1px solid #444444 !important;
+}
+.b2_theme {
+  border: 2px solid #444444 !important;
+}
+.b3_theme {
+  border: 3px solid #444444 !important;
+}
+.b4_theme {
+  border: 4px solid #444444 !important;
+}
+.b5_theme {
+  border: 5px solid #444444 !important;
+}
+.b1_utheme {
+  border: 1px solid #444444 !important;
+}
+.b2_utheme {
+  border: 2px solid #444444 !important;
+}
+.b3_utheme {
+  border: 3px solid #444444 !important;
+}
+.b4_utheme {
+  border: 4px solid #444444 !important;
+}
+.b5_utheme {
+  border: 5px solid #444444 !important;
+}
+/* 上 */
+.bt1_theme {
+  border-top: 1px solid #444444 !important;
+}
+.bt2_theme {
+  border-top: 2px solid #444444 !important;
+}
+.bt3_theme {
+  border-top: 3px solid #444444 !important;
+}
+.bt4_theme {
+  border-top: 4px solid #444444 !important;
+}
+.bt5_theme {
+  border-top: 5px solid #444444 !important;
+}
+.bt1_utheme {
+  border-top: 1px solid #444444 !important;
+}
+.bt2_utheme {
+  border-top: 2px solid #444444 !important;
+}
+.bt3_utheme {
+  border-top: 3px solid #444444 !important;
+}
+.bt4_utheme {
+  border-top: 4px solid #444444 !important;
+}
+.bt5_utheme {
+  border-top: 5px solid #444444 !important;
+}
+/* 右 */
+.br1_theme {
+  border-right: 1px solid #444444 !important;
+}
+.br2_theme {
+  border-right: 2px solid #444444 !important;
+}
+.br3_theme {
+  border-right: 3px solid #444444 !important;
+}
+.br4_theme {
+  border-right: 4px solid #444444 !important;
+}
+.br5_theme {
+  border-right: 5px solid #444444 !important;
+}
+.br1_utheme {
+  border-right: 1px solid #444444 !important;
+}
+.br2_utheme {
+  border-right: 2px solid #444444 !important;
+}
+.br3_utheme {
+  border-right: 3px solid #444444 !important;
+}
+.br4_utheme {
+  border-right: 4px solid #444444 !important;
+}
+.br5_utheme {
+  border-right: 5px solid #444444 !important;
+}
+/* 下 */
+.bb1_theme {
+  border-bottom: 1px solid #444444 !important;
+}
+.bb2_theme {
+  border-bottom: 2px solid #444444 !important;
+}
+.bb3_theme {
+  border-bottom: 3px solid #444444 !important;
+}
+.bb4_theme {
+  border-bottom: 4px solid #444444 !important;
+}
+.bb5_theme {
+  border-bottom: 5px solid #444444 !important;
+}
+.bb1_utheme {
+  border-bottom: 1px solid #444444 !important;
+}
+.bb2_utheme {
+  border-bottom: 2px solid #444444 !important;
+}
+.bb3_utheme {
+  border-bottom: 3px solid #444444 !important;
+}
+.bb4_utheme {
+  border-bottom: 4px solid #444444 !important;
+}
+.bb5_utheme {
+  border-bottom: 5px solid #444444 !important;
+}
+/* 左 */
+.bl1_theme {
+  border-left: 1px solid #444444 !important;
+}
+.bl2_theme {
+  border-left: 2px solid #444444 !important;
+}
+.bl3_theme {
+  border-left: 3px solid #444444 !important;
+}
+.bl4_theme {
+  border-left: 4px solid #444444 !important;
+}
+.bl5_theme {
+  border-left: 5px solid #444444 !important;
+}
+.bl1_utheme {
+  border-left: 1px solid #444444 !important;
+}
+.bl2_utheme {
+  border-left: 2px solid #444444 !important;
+}
+.bl3_utheme {
+  border-left: 3px solid #444444 !important;
+}
+.bl4_utheme {
+  border-left: 4px solid #444444 !important;
+}
+.bl5_utheme {
+  border-left: 5px solid #444444 !important;
+}
+/* グレーボーダー */
+.b1_e {
+  border: 1px solid #eee !important;
+}
+.b2_e {
+  border: 2px solid #eee !important;
+}
+.b3_e {
+  border: 3px solid #eee !important;
+}
+.b4_e {
+  border: 4px solid #eee !important;
+}
+.b5_e {
+  border: 5px solid #eee !important;
+}
+.b1_d {
+  border: 1px solid #ddd !important;
+}
+.b2_d {
+  border: 2px solid #ddd !important;
+}
+.b3_d {
+  border: 3px solid #ddd !important;
+}
+.b4_d {
+  border: 4px solid #ddd !important;
+}
+.b5_d {
+  border: 5px solid #ddd !important;
+}
+.b1_c {
+  border: 1px solid #ccc !important;
+}
+.b2_c {
+  border: 2px solid #ccc !important;
+}
+.b3_c {
+  border: 3px solid #ccc !important;
+}
+.b4_c {
+  border: 4px solid #ccc !important;
+}
+.b5_c {
+  border: 5px solid #ccc !important;
+}
+.b1_9 {
+  border: 1px solid #999 !important;
+}
+.b2_9 {
+  border: 2px solid #999 !important;
+}
+.b3_9 {
+  border: 3px solid #999 !important;
+}
+.b4_9 {
+  border: 4px solid #999 !important;
+}
+.b5_9 {
+  border: 5px solid #999 !important;
+}
+.b1_6 {
+  border: 1px solid #666 !important;
+}
+.b2_6 {
+  border: 2px solid #666 !important;
+}
+.b3_6 {
+  border: 3px solid #666 !important;
+}
+.b4_6 {
+  border: 4px solid #666 !important;
+}
+.b5_6 {
+  border: 5px solid #666 !important;
+}
+.b1_3 {
+  border: 1px solid #333 !important;
+}
+.b2_3 {
+  border: 2px solid #333 !important;
+}
+.b3_3 {
+  border: 3px solid #333 !important;
+}
+.b4_3 {
+  border: 4px solid #333 !important;
+}
+.b5_3 {
+  border: 5px solid #333 !important;
+}
+/* 上 */
+.bt1_e {
+  border-top: 1px solid #eee !important;
+}
+.bt2_e {
+  border-top: 2px solid #eee !important;
+}
+.bt3_e {
+  border-top: 3px solid #eee !important;
+}
+.bt4_e {
+  border-top: 4px solid #eee !important;
+}
+.bt5_e {
+  border-top: 5px solid #eee !important;
+}
+.bt1_d {
+  border-top: 1px solid #ddd !important;
+}
+.bt2_d {
+  border-top: 2px solid #ddd !important;
+}
+.bt3_d {
+  border-top: 3px solid #ddd !important;
+}
+.bt4_d {
+  border-top: 4px solid #ddd !important;
+}
+.bt5_d {
+  border-top: 5px solid #ddd !important;
+}
+.bt1_c {
+  border-top: 1px solid #ccc !important;
+}
+.bt2_c {
+  border-top: 2px solid #ccc !important;
+}
+.bt3_c {
+  border-top: 3px solid #ccc !important;
+}
+.bt4_c {
+  border-top: 4px solid #ccc !important;
+}
+.bt5_c {
+  border-top: 5px solid #ccc !important;
+}
+.bt1_9 {
+  border-top: 1px solid #999 !important;
+}
+.bt2_9 {
+  border-top: 2px solid #999 !important;
+}
+.bt3_9 {
+  border-top: 3px solid #999 !important;
+}
+.bt4_9 {
+  border-top: 4px solid #999 !important;
+}
+.bt5_9 {
+  border-top: 5px solid #999 !important;
+}
+.bt1_6 {
+  border-top: 1px solid #666 !important;
+}
+.bt2_6 {
+  border-top: 2px solid #666 !important;
+}
+.bt3_6 {
+  border-top: 3px solid #666 !important;
+}
+.bt4_6 {
+  border-top: 4px solid #666 !important;
+}
+.bt5_6 {
+  border-top: 5px solid #666 !important;
+}
+.bt1_3 {
+  border-top: 1px solid #333 !important;
+}
+.bt2_3 {
+  border-top: 2px solid #333 !important;
+}
+.bt3_3 {
+  border-top: 3px solid #333 !important;
+}
+.bt4_3 {
+  border-top: 4px solid #333 !important;
+}
+.bt5_3 {
+  border-top: 5px solid #333 !important;
+}
+/* 右 */
+.br1_e {
+  border-right: 1px solid #eee !important;
+}
+.br2_e {
+  border-right: 2px solid #eee !important;
+}
+.br3_e {
+  border-right: 3px solid #eee !important;
+}
+.br4_e {
+  border-right: 4px solid #eee !important;
+}
+.br5_e {
+  border-right: 5px solid #eee !important;
+}
+.br1_d {
+  border-right: 1px solid #ddd !important;
+}
+.br2_d {
+  border-right: 2px solid #ddd !important;
+}
+.br3_d {
+  border-right: 3px solid #ddd !important;
+}
+.br4_d {
+  border-right: 4px solid #ddd !important;
+}
+.br5_d {
+  border-right: 5px solid #ddd !important;
+}
+.br1_c {
+  border-right: 1px solid #ccc !important;
+}
+.br2_c {
+  border-right: 2px solid #ccc !important;
+}
+.br3_c {
+  border-right: 3px solid #ccc !important;
+}
+.br4_c {
+  border-right: 4px solid #ccc !important;
+}
+.br5_c {
+  border-right: 5px solid #ccc !important;
+}
+.br1_9 {
+  border-right: 1px solid #999 !important;
+}
+.br2_9 {
+  border-right: 2px solid #999 !important;
+}
+.br3_9 {
+  border-right: 3px solid #999 !important;
+}
+.br4_9 {
+  border-right: 4px solid #999 !important;
+}
+.br5_9 {
+  border-right: 5px solid #999 !important;
+}
+.br1_6 {
+  border-right: 1px solid #666 !important;
+}
+.br2_6 {
+  border-right: 2px solid #666 !important;
+}
+.br3_6 {
+  border-right: 3px solid #666 !important;
+}
+.br4_6 {
+  border-right: 4px solid #666 !important;
+}
+.br5_6 {
+  border-right: 5px solid #666 !important;
+}
+.br1_3 {
+  border-right: 1px solid #333 !important;
+}
+.br2_3 {
+  border-right: 2px solid #333 !important;
+}
+.br3_3 {
+  border-right: 3px solid #333 !important;
+}
+.br4_3 {
+  border-right: 4px solid #333 !important;
+}
+.br5_3 {
+  border-right: 5px solid #333 !important;
+}
+/* 下 */
+.bb1_e {
+  border-bottom: 1px solid #eee !important;
+}
+.bb2_e {
+  border-bottom: 2px solid #eee !important;
+}
+.bb3_e {
+  border-bottom: 3px solid #eee !important;
+}
+.bb4_e {
+  border-bottom: 4px solid #eee !important;
+}
+.bb5_e {
+  border-bottom: 5px solid #eee !important;
+}
+.bb1_d {
+  border-bottom: 1px solid #ddd !important;
+}
+.bb2_d {
+  border-bottom: 2px solid #ddd !important;
+}
+.bb3_d {
+  border-bottom: 3px solid #ddd !important;
+}
+.bb4_d {
+  border-bottom: 4px solid #ddd !important;
+}
+.bb5_d {
+  border-bottom: 5px solid #ddd !important;
+}
+.bb1_c {
+  border-bottom: 1px solid #ccc !important;
+}
+.bb2_c {
+  border-bottom: 2px solid #ccc !important;
+}
+.bb3_c {
+  border-bottom: 3px solid #ccc !important;
+}
+.bb4_c {
+  border-bottom: 4px solid #ccc !important;
+}
+.bb5_c {
+  border-bottom: 5px solid #ccc !important;
+}
+.bb1_9 {
+  border-bottom: 1px solid #999 !important;
+}
+.bb2_9 {
+  border-bottom: 2px solid #999 !important;
+}
+.bb3_9 {
+  border-bottom: 3px solid #999 !important;
+}
+.bb4_9 {
+  border-bottom: 4px solid #999 !important;
+}
+.bb5_9 {
+  border-bottom: 5px solid #999 !important;
+}
+.bb1_6 {
+  border-bottom: 1px solid #666 !important;
+}
+.bb2_6 {
+  border-bottom: 2px solid #666 !important;
+}
+.bb3_6 {
+  border-bottom: 3px solid #666 !important;
+}
+.bb4_6 {
+  border-bottom: 4px solid #666 !important;
+}
+.bb5_6 {
+  border-bottom: 5px solid #666 !important;
+}
+.bb1_3 {
+  border-bottom: 1px solid #333 !important;
+}
+.bb2_3 {
+  border-bottom: 2px solid #333 !important;
+}
+.bb3_3 {
+  border-bottom: 3px solid #333 !important;
+}
+.bb4_3 {
+  border-bottom: 4px solid #333 !important;
+}
+.bb5_3 {
+  border-bottom: 5px solid #333 !important;
+}
+/* 左 */
+.bl1_e {
+  border-left: 1px solid #eee !important;
+}
+.bl2_e {
+  border-left: 2px solid #eee !important;
+}
+.bl3_e {
+  border-left: 3px solid #eee !important;
+}
+.bl4_e {
+  border-left: 4px solid #eee !important;
+}
+.bl5_e {
+  border-left: 5px solid #eee !important;
+}
+.bl1_d {
+  border-left: 1px solid #ddd !important;
+}
+.bl2_d {
+  border-left: 2px solid #ddd !important;
+}
+.bl3_d {
+  border-left: 3px solid #ddd !important;
+}
+.bl4_d {
+  border-left: 4px solid #ddd !important;
+}
+.bl5_d {
+  border-left: 5px solid #ddd !important;
+}
+.bl1_c {
+  border-left: 1px solid #ccc !important;
+}
+.bl2_c {
+  border-left: 2px solid #ccc !important;
+}
+.bl3_c {
+  border-left: 3px solid #ccc !important;
+}
+.bl4_c {
+  border-left: 4px solid #ccc !important;
+}
+.bl5_c {
+  border-left: 5px solid #ccc !important;
+}
+.bl1_9 {
+  border-left: 1px solid #999 !important;
+}
+.bl2_9 {
+  border-left: 2px solid #999 !important;
+}
+.bl3_9 {
+  border-left: 3px solid #999 !important;
+}
+.bl4_9 {
+  border-left: 4px solid #999 !important;
+}
+.bl5_9 {
+  border-left: 5px solid #999 !important;
+}
+.bl1_6 {
+  border-left: 1px solid #666 !important;
+}
+.bl2_6 {
+  border-left: 2px solid #666 !important;
+}
+.bl3_6 {
+  border-left: 3px solid #666 !important;
+}
+.bl4_6 {
+  border-left: 4px solid #666 !important;
+}
+.bl5_6 {
+  border-left: 5px solid #666 !important;
+}
+.bl1_3 {
+  border-left: 1px solid #333 !important;
+}
+.bl2_3 {
+  border-left: 2px solid #333 !important;
+}
+.bl3_3 {
+  border-left: 3px solid #333 !important;
+}
+.bl4_3 {
+  border-left: 4px solid #333 !important;
+}
+.bl5_3 {
+  border-left: 5px solid #333 !important;
+}
+/*	マージン設定----------------------------------------- */
+/* margin無し */
+.no_margin {
+  margin: 0px !important;
+}
+.m5 {
+  margin: 5px !important;
+}
+.m10 {
+  margin: 10px !important;
+}
+.m15 {
+  margin: 15px !important;
+}
+.m20 {
+  margin: 20px !important;
+}
+.m25 {
+  margin: 25px !important;
+}
+.m30 {
+  margin: 30px !important;
+}
+.m35 {
+  margin: 35px !important;
+}
+.m40 {
+  margin: 40px !important;
+}
+.m45 {
+  margin: 45px !important;
+}
+.m50 {
+  margin: 50px !important;
+}
+/* 上 */
+.mt0 {
+  margin-top: 0px !important;
+}
+.mt5 {
+  margin-top: 5px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mt15 {
+  margin-top: 15px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mt25 {
+  margin-top: 25px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt35 {
+  margin-top: 35px !important;
+}
+.mt40 {
+  margin-top: 40px !important;
+}
+.mt45 {
+  margin-top: 45px !important;
+}
+.mt50 {
+  margin-top: 50px !important;
+}
+/* 右 */
+.mr0 {
+  margin-right: 0px !important;
+}
+.mr5 {
+  margin-right: 5px !important;
+}
+.mr10 {
+  margin-right: 10px !important;
+}
+.mr15 {
+  margin-right: 15px !important;
+}
+.mr20 {
+  margin-right: 20px !important;
+}
+.mr25 {
+  margin-right: 25px !important;
+}
+.mr30 {
+  margin-right: 30px !important;
+}
+.mr35 {
+  margin-right: 35px !important;
+}
+.mr40 {
+  margin-right: 40px !important;
+}
+.mr45 {
+  margin-right: 45px !important;
+}
+.mr50 {
+  margin-right: 50px !important;
+}
+/* 下 */
+.mb0 {
+  margin-bottom: 0px !important;
+}
+.mb5 {
+  margin-bottom: 5px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.mb15 {
+  margin-bottom: 15px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.mb25 {
+  margin-bottom: 25px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb35 {
+  margin-bottom: 35px !important;
+}
+.mb40 {
+  margin-bottom: 40px !important;
+}
+.mb45 {
+  margin-bottom: 45px !important;
+}
+.mb50 {
+  margin-bottom: 50px !important;
+}
+/* 左 */
+.ml0 {
+  margin-left: 0px !important;
+}
+.ml5 {
+  margin-left: 5px !important;
+}
+.ml10 {
+  margin-left: 10px !important;
+}
+.ml15 {
+  margin-left: 15px !important;
+}
+.ml20 {
+  margin-left: 20px !important;
+}
+.ml25 {
+  margin-left: 25px !important;
+}
+.ml30 {
+  margin-left: 30px !important;
+}
+.ml35 {
+  margin-left: 35px !important;
+}
+.ml40 {
+  margin-left: 40px !important;
+}
+.ml45 {
+  margin-left: 45px !important;
+}
+.ml50 {
+  margin-left: 50px !important;
+}
+/* パディング設定
+------------------------------------------ */
+/* padding無し */
+.no_padding {
+  padding: 0px !important;
+}
+.p5 {
+  padding: 5px !important;
+}
+.p10 {
+  padding: 10px !important;
+}
+.p15 {
+  padding: 15px !important;
+}
+.p20 {
+  padding: 20px !important;
+}
+.p25 {
+  padding: 25px !important;
+}
+.p30 {
+  padding: 30px !important;
+}
+.p35 {
+  padding: 35px !important;
+}
+.p40 {
+  padding: 40px !important;
+}
+.p45 {
+  padding: 45px !important;
+}
+.p50 {
+  padding: 50px !important;
+}
+/* 上 */
+.pt0 {
+  padding-top: 0px !important;
+}
+.pt5 {
+  padding-top: 5px !important;
+}
+.pt10 {
+  padding-top: 10px !important;
+}
+.pt15 {
+  padding-top: 15px !important;
+}
+.pt20 {
+  padding-top: 20px !important;
+}
+.pt25 {
+  padding-top: 25px !important;
+}
+.pt30 {
+  padding-top: 30px !important;
+}
+.pt35 {
+  padding-top: 35px !important;
+}
+.pt40 {
+  padding-top: 40px !important;
+}
+.pt45 {
+  padding-top: 45px !important;
+}
+.pt50 {
+  padding-top: 50px !important;
+}
+/* 右 */
+.pr0 {
+  padding-right: 0px !important;
+}
+.pr5 {
+  padding-right: 5px !important;
+}
+.pr10 {
+  padding-right: 10px !important;
+}
+.pr15 {
+  padding-right: 15px !important;
+}
+.pr20 {
+  padding-right: 20px !important;
+}
+.pr25 {
+  padding-right: 25px !important;
+}
+.pr30 {
+  padding-right: 30px !important;
+}
+.pr35 {
+  padding-right: 35px !important;
+}
+.pr40 {
+  padding-right: 40px !important;
+}
+.pr45 {
+  padding-right: 45px !important;
+}
+.pr50 {
+  padding-right: 50px !important;
+}
+/* 下 */
+.pb0 {
+  padding-bottom: 0px !important;
+}
+.pb5 {
+  padding-bottom: 5px !important;
+}
+.pb10 {
+  padding-bottom: 10px !important;
+}
+.pb15 {
+  padding-bottom: 15px !important;
+}
+.pb20 {
+  padding-bottom: 20px !important;
+}
+.pb25 {
+  padding-bottom: 25px !important;
+}
+.pb30 {
+  padding-bottom: 30px !important;
+}
+.pb35 {
+  padding-bottom: 35px !important;
+}
+.pb40 {
+  padding-bottom: 40px !important;
+}
+.pb45 {
+  padding-bottom: 45px !important;
+}
+.pb50 {
+  padding-bottom: 50px !important;
+}
+/* 左 */
+.pl0 {
+  padding-left: 0px !important;
+}
+.pl5 {
+  padding-left: 5px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
+.pl15 {
+  padding-left: 15px !important;
+}
+.pl20 {
+  padding-left: 20px !important;
+}
+.pl25 {
+  padding-left: 25px !important;
+}
+.pl30 {
+  padding-left: 30px !important;
+}
+.pl35 {
+  padding-left: 35px !important;
+}
+.pl40 {
+  padding-left: 40px !important;
+}
+.pl45 {
+  padding-left: 45px !important;
+}
+.pl50 {
+  padding-left: 50px !important;
+}
+/*
+	% width
+----------------------------------------------*/
+.w100 {
+  width: 100% !important;
+}
+.w95 {
+  width: 95% !important;
+}
+.w90 {
+  width: 90% !important;
+}
+.w85 {
+  width: 85% !important;
+}
+.w80 {
+  width: 80% !important;
+}
+.w75 {
+  width: 75% !important;
+}
+.w70 {
+  width: 70% !important;
+}
+.w65 {
+  width: 65% !important;
+}
+.w60 {
+  width: 60% !important;
+}
+.w55 {
+  width: 55% !important;
+}
+.w50 {
+  width: 50% !important;
+}
+.w45 {
+  width: 45% !important;
+}
+.w40 {
+  width: 40% !important;
+}
+.w35 {
+  width: 35% !important;
+}
+.w30 {
+  width: 30% !important;
+}
+.w25 {
+  width: 25% !important;
+}
+.w20 {
+  width: 20% !important;
+}
+.w15 {
+  width: 15% !important;
+}
+.w10 {
+  width: 10% !important;
+}
+.w5 {
+  width: 5% !important;
+}
+/*==============================================================
+
+	■K.その他　共通スタイル設定
+
+================================================================*/
+@media screen and (max-width: 768px) {
+  
+}
+/*==============================================================
+
+	G.Page Styles
+
+================================================================*/

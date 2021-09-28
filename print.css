@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+
+
+/* ===========================
+1.印刷用css
+=========================== */
+
+@media print {
+ 
+ html,
+ body{
+ 	height: auto;
+ }
+ #header_wrap{
+    display: none !important;
+ }
+ #footer_wrap{
+    display: none !important;
+ }
+ #aside{
+    display: none !important;
+ }
+ #content_left{
+    float: none !important;
+    margin: 0 auto !important;
+ }
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body{font-size: 13px;}
+* html body{font-size: 13px;}/* IE 6以下 */
+*+html body{font-size: 13px;}/* IE 7向け */
+body #header_wrap #header #header_sub #box_fontsize .middle{
+	background: #fff;
+	color: #333;
+	border:1px solid #eee;
+}
